@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FletNix — What to Watch</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🎬 FletNix</h1>
+    <nav>
+      <button id="loginBtn">Login</button>
+      <button id="registerBtn">Register</button>
+      <button id="logoutBtn" style="display:none;">Logout</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="authSection" class="modal hidden">
+      <div class="auth-box">
+        <h2 id="authTitle">Login</h2>
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <input type="number" id="age" placeholder="Age" class="hidden" />
+        <button id="authSubmit">Submit</button>
+        <button id="closeAuth">Close</button>
+      </div>
+    </section>
+
+    <section id="searchSection">
+      <input type="text" id="searchInput" placeholder="Search movies, shows or by cast..." />
+      <select id="typeFilter">
+        <option value="">All</option>
+        <option value="Movie">Movies</option>
+        <option value="TV Show">TV Shows</option>
+      </select>
+      <button id="searchBtn">Search</button>
+    </section>
+
+    <section id="showsSection">
+      <div id="showsContainer" class="shows-grid"></div>
+      <div id="pagination">
+        <button id="prevPage">Prev</button>
+        <span id="pageInfo">Page 1</span>
+        <button id="nextPage">Next</button>
+      </div>
+    </section>
+  </main>
+  <!-- Show Details Modal -->
+<section id="showModal" class="modal hidden">
+  <div class="modal-content">
+    <span id="closeModal">&times;</span>
+    <div id="modalDetails"></div>
+  </div>
+</section>
+
+  <footer>
+    <p>© Saswat Kumar Pradhan | 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
